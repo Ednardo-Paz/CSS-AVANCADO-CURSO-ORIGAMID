@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    font-size: 1.2rem;
+    margin-bottom: 100px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+h1{
+    text-align: center;
+    padding: 100px;
+   
+}
+img{
+    width: 100%;
+    display: block;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+    flex-wrap: wrap;
+}
+.menu{
+    display: flex;
+    
+}
+.menu li{
+    margin-left: 10px;
+    
+}
+.menu li a{
+    display: inline-block;
+    padding: 10px;
+}
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.flex > div{
+    flex: 1 1 200px;
+    padding: 10px;
+}
+/*CCS GRID1*/
+
+.grid1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    max-width: 800px;
+    padding: 10px;
+    margin: 0 auto;
+    grid-gap: 20px;
+}
+.grid1 > div:nth-child(n + 4){
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    align-items: center;
+}
+.grid1 > div.anuncio{
+    grid-column: 1;
+    grid-row: 2 /6; 
+    display: block;
+}
+@media (max-width:600px){
+    .grid1{
+        grid-template-columns: 1fr 1fr ;
+    }
+    .grid1 > div:nth-child(n + 4){
+        display: block;
+    }
+    .grid1 > div.anuncio{
+        grid-column: auto;
+        grid-row: auto ;
+        order: -1;
+    }
+}
